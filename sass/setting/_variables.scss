@@ -1,21 +1,31 @@
+
 // 色
 $background: #fff; // 背景
-$text-color: #333; // テキスト色
+$text-color: #222222; // テキスト色
+$main-color: #382620; // メインカラー
+$base-color: #EAE0D5; // ベースカラー
+$base-color2: #F3EFEB; // ベースカラー2
+$accent-color: #F07317; // アクセントカラー
+$btn-color: #888888; // ボランカラー
 
 // マウスホバー
 $opacity: 0.7; // 透過度
 
 // フォント
-$font-family-base: "";// ベースフォント
+
+$font-family-base: "'Noto Serif JP', serif";// ベースフォント
+$font-family-Amatic: "'Amatic SC', cursive";
+$font-family-Damion: "'Damion', cursive";
+$font-family-Patua: "'Patua One', cursive";
 $font-size-base: 16px; // ベースフォントサイズ
-$font-weight-base: 400; // ベースフォントウェイト
+$font-weight-base: 500; // ベースフォントウェイト
 $lh: 1.6; // ベース行間
 
 // ---
 // レイアウト
 // ---
 $l-tab: 768px; // タブレットサイズ
-$l-inner: 1000px; // インナー幅
+$l-inner: 1280px; // インナー幅
 $l-pc: 1440px; // パソコン幅
 
 // ブレークポイント（PC基準）

@@ -132,24 +132,6 @@ legend {
 	padding: 0 8px;
 }
 
-/* button */
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button {
-	display: inline-block;
-	margin: 0;
-	padding: 10px 30px;
-	border: 1px solid #999;
-	border-radius: 0;
-	-webkit-box-sizing: content-box;
-	-webkit-appearance: button;
-	appearance: button;
-	background: #efefef;
-	color: #000;
-	font-size: 20px;
-	cursor: pointer;
-}
 
 /* ブラウザ対策
 ---------------------------------------------------------------------------- */
@@ -254,14 +236,7 @@ input[type="radio"]:checked + span::after {
 }
 
 /* button */
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-button:hover {
-	border-color: #3498db;
-	background: #3498db;
-	color: #fff;
-}
+
 
 /* focus */
 input:focus,
