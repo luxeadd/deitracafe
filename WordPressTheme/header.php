@@ -6,26 +6,26 @@
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <?php wp_head(); ?>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Damion&family=Noto+Serif+JP:wght@500;700&family=Patua+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Damion&family=Noto+Serif+JP:wght@500;700&family=Patua+One&display=swap" rel="stylesheet">
 </head>
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <header class="l-header p-header">
     <div class="p-header__inner">
-      <div class="p-header__logo c-logo-w">
+      <h1 class="p-header__logo c-logo-w js-header">
         <a href="">  
           <img src="<?php echo get_template_directory_uri(  ) ?>/assets/img/top/logo_light.svg" alt="ロゴ">
         </a>
-      </div><!-- /.p-header__logo -->
+      </h1><!-- /.p-header__logo -->
       
       
       <!-- ドロワーアイコン  -->
       <button type="button" id="js-hamburger" class="p-header__drawer c-hamburger" aria-controls="js-drawer-menu" aria-expanded="false" area-label="メニューを開閉する">
         <span class="c-hamburger__line"></span>
       </button>
-      
+
       <!-- ドロワーメニュー -->
       <div class=" p-header__drawer-menu  p-drawer-menu" id="js-drawer-menu" area-hidden="true">
         <div class="p-drawer-menu__logo c-logo-w">

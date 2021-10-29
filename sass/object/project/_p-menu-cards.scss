@@ -1,0 +1,17 @@
+.p-menu-cards {
+ display: flex;
+ flex-wrap: wrap;
+ margin-left: rem(-19);
+ margin-top: rem(-20);
+}
+
+.p-menu-cards__item{
+width: calc(50% - #{rem(19) * 2 / 2});
+margin-left: rem(19);
+margin-top: rem(20);
+
+@include mq(tab) {
+  width: calc(33% - #{rem(32) * 3 / 3});
+   margin-left: rem(32);
+}
+}

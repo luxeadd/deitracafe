@@ -18,3 +18,37 @@
   object-fit: cover;
 
 }
+
+.p-top-mv__title {
+ position: absolute;
+ top: rem(125);
+ left: rem(20);
+ font-size: rem(16);
+ line-height: 2;
+ letter-spacing: 0.14em;
+ color: #fff;
+
+}
+
+.p-top-mv__body {
+ position: absolute;
+ bottom: rem(32);
+ right: rem(20);
+ left: rem(20);
+}
+
+.p-top-mv__item {
+ position: relative;
+}
+
+.p-top-mv__item::before {
+  content: "";
+  display: block;
+  width: rem(145);
+  height: rem(82);
+  background: url(../img/top/mv-text.png) no-repeat center center/contain;
+  position: absolute;
+  top: rem(-41);
+  right: rem(-9);
+
+}

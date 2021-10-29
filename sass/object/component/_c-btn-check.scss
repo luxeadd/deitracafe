@@ -1,0 +1,29 @@
+.c-btn-check {
+}
+
+.c-btn-check__link {
+  position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: rem(140);
+ height: rem(29);
+ background: $btn-color;
+color: #fff;
+font-size: rem(12);
+font-weight: 700;
+transition: all .3s;
+
+@include mq(tab) {
+  width: rem(174);
+  height: rem(36);
+
+}
+
+}
+
+.c-btn-check__link:hover {
+ background: #fff;
+ color: $btn-color;
+ border: 1px solid $btn-color;
+}

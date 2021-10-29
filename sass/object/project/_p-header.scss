@@ -3,12 +3,12 @@
   background: transparent;
 }
 
-.p-header.change-color {
-  background: rgba($color: #111111, $alpha: 1.0);
+.p-header__logo.change-color {
+  display: none;
  }
 
 .p-header__inner{
-  padding: 0 rem(20);
+  padding: 0 rem(14);
   height: inherit;
 }
 

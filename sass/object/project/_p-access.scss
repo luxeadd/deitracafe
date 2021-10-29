@@ -1,0 +1,75 @@
+.p-access {
+  padding: rem(180) 0 rem(80);
+  background: linear-gradient(to bottom,  $base-color2 0%, $base-color2 10%, $base-color 10%, $base-color 100% );
+  position: relative;
+   overflow: hidden;
+
+}
+
+.p-access::before {
+  content: "";
+  display: block;
+  width: rem(188);
+  height: rem(180);
+  background: url(../img/top/bg-pan.png) no-repeat center center/contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(40px , -10px);
+  z-index: 10;
+  
+  @include mq(tab) {
+    width: rem(374);
+    height: rem(359);
+    transform: translate(50px , -30px);
+    
+  }
+
+}
+
+.p-access::after {
+ 
+}
+
+
+.p-access__title {
+ text-align: center;
+ width: rem(100);
+ margin: 0 auto;
+ position: relative;
+ 
+ @include mq(tab) {
+   width: rem(300);
+   
+ }
+}
+
+.p-access__title::before {
+  content: "";
+  display: block;
+  width: rem(200);
+  height: rem(172);
+  background: url(../img/top/access-text.png) no-repeat center center/contain;
+  position: absolute;
+  top: rem(-123);
+  left:  rem(-171);
+  z-index: 10;
+  
+  @include mq(tab) {
+    width: rem(232);
+    height: rem(200);
+    top: rem(-114);
+    left:  rem(-150);
+    
+  }
+
+}
+
+.p-access__map {
+ margin-top: rem(40);
+ 
+ @include mq(tab) {
+ margin-top: rem(50);
+   
+ }
+}

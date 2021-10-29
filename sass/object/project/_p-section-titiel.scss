@@ -1,0 +1,29 @@
+.p-section-title {
+
+}
+
+.p-section-title__en {
+display: block;
+font-family: $font-family-Amatic;
+ font-size: rem(40);
+ font-weight: bold;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+
+ @include mq(tab) {
+   font-size: rem(52);
+   letter-spacing: 0.2em;
+
+ }
+ 
+}
+.p-section-title__jp {
+display: block;
+font-size: rem(12);
+margin-top: rem(-3);
+@include mq(tab) {
+  font-size: rem(14);
+  
+}
+}
+

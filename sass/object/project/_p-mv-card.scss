@@ -1,0 +1,96 @@
+.p-mv-card {
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #fff, $alpha: 0.7);
+
+}
+.p-mv-card  a {
+  width: 100%;
+  height: 100%;
+  padding: rem(12);
+  display: flex;
+  position: relative;
+}
+
+.p-mv-card a:hover {
+  .p-mv-card__figure img {
+    transform: scale(1.3) translate(-40%, -40%);
+
+  }
+}
+
+.p-mv-card__figure {
+  width: rem(100);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  
+  }
+  
+  .p-mv-card__figure::before {
+    padding-top: 100 / 100 * 100%; //画像縦 / 横
+    display: block;
+    content: "";
+    
+    @include mq(tab) {
+      padding-top: 100 / 100 * 100%; //画像縦 / 横
+      
+    }
+  
+  }
+  
+  .p-mv-card__figure img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+  }
+
+.p-mv-card__body {
+margin-left: rem(16);
+}
+
+.p-mv-card__title{
+font-size: rem(12);
+font-weight: 700;
+line-height: 1.7143;
+margin-top: rem(10);
+
+@include mq(tab) {
+  font-size: rem(14);
+}
+}
+
+
+.p-mv-card__category {
+  padding: rem(1) rem(11);
+  background-color: $btn-color;
+  color: #fff;
+  font-size: rem(12);
+  position: absolute;
+  top: rem(8);
+  left: rem(-10);
+
+}
+.p-mv-card__category::before {
+  position: absolute;
+  top: 0;
+  display: block;
+  height: rem(10.5);
+  content: '';
+  border: rem(10.5) solid $btn-color;
+  right: rem(-5);
+  border-right-width: rem(5);
+  border-right-color: transparent;
+}
+
+
+
+.p-mv-card__time {
+ font-size: rem(12);
+}
