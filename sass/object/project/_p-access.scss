@@ -1,8 +1,13 @@
 .p-access {
-  padding: rem(180) 0 rem(80);
-  background: linear-gradient(to bottom,  $base-color2 0%, $base-color2 10%, $base-color 10%, $base-color 100% );
+  padding: rem(71) 0 rem(80);
+  background: $base-color;
   position: relative;
-   overflow: hidden;
+  
+  @include mq(tab) {
+    padding: rem(69) 0 rem(80);
+    
+  }
+
 
 }
 
@@ -13,15 +18,16 @@
   height: rem(180);
   background: url(../img/top/bg-pan.png) no-repeat center center/contain;
   position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(40px , -10px);
+  top: rem(-101);
+  right: rem(-35);
   z-index: 10;
   
   @include mq(tab) {
     width: rem(374);
     height: rem(359);
-    transform: translate(50px , -30px);
+    top: rem(-182);
+    right: rem(-68);
+    
     
   }
 
@@ -51,15 +57,15 @@
   height: rem(172);
   background: url(../img/top/access-text.png) no-repeat center center/contain;
   position: absolute;
-  top: rem(-123);
+  top: rem(-114);
   left:  rem(-171);
   z-index: 10;
   
   @include mq(tab) {
     width: rem(232);
     height: rem(200);
-    top: rem(-114);
-    left:  rem(-150);
+    top: rem(-119);
+    left:  rem(-155);
     
   }
 
@@ -69,7 +75,7 @@
  margin-top: rem(40);
  
  @include mq(tab) {
- margin-top: rem(50);
+ margin-top: rem(39);
    
  }
 }

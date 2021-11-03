@@ -1,4 +1,6 @@
 
+
+
 // 色
 $background: #F3EFEB; // 背景
 $text-color: #222222; // テキスト色
@@ -6,8 +8,10 @@ $btn-color: #222222; // ボタン色
 $main-color: #382620; // メインカラー
 $base-color: #EAE0D5; // ベースカラー濃
 $base-color2: #F3EFEB; // ベースカラー薄い
+$base-color-gray: #F7F6F4; // ベースカラー薄い
 $accent-color: #F07317; // アクセントカラー
 $tab-no-color: #888888; // タブ非アクティブカラー
+
 
 // マウスホバー
 $opacity: 0.7; // 透過度
@@ -16,7 +20,8 @@ $opacity: 0.7; // 透過度
 
 $font-family-base: 'Noto Serif JP', serif;// ベースフォント
 $font-family-Amatic: 'Amatic SC', cursive;
-$font-family-Damion: 'Damion', cursive;
+$font-family-Damion: 'Noto Serif JP', cursive;
+$font-family-Damion2: 'Damion', cursive;
 $font-family-Patua: 'Patua One', cursive;
 $font-size-base: 16px; // ベースフォントサイズ
 $font-weight-base: 500; // ベースフォントウェイト

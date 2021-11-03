@@ -1,0 +1,11 @@
+.c-breadcrumbs {
+  font-size: rem(12);
+  font-weight: 700;
+  margin-top: rem(4);
+  
+  @include mq(tab) {
+    font-size: rem(14);
+    margin-top: rem(16);
+  }
+
+}

@@ -1,6 +1,6 @@
 .p-footer {
  background-color: $main-color;
- padding: rem(46) 0 rem(20);
+ padding: rem(40) 0 rem(20);
  color: #fff;
  position: relative;
 }
@@ -33,7 +33,7 @@
 
 .p-footer__item {
  margin: 0 rem(13);
- width: rem(26);
+ width: rem(32);
 
  @include mq(tab) {
    width: rem(20);

@@ -1,0 +1,27 @@
+.p-sub-shop {
+  margin-left: auto;
+  margin-right: auto;
+	max-width: rem(540); //状況によって変える必要があるかも
+	width: 100%;
+  padding-bottom: rem(160);
+  
+  @include mq(tab) {
+    max-width: 688px;
+    padding-bottom: rem(170);
+	
+	}
+}
+
+.p-sub-shop__item + .p-sub-shop__item {
+  margin-top: rem(60);
+
+  @include mq(tab) {
+    margin-top: rem(120);
+
+  }
+
+}
+
+.p-sub-shop__item > .p-map__iframe {
+  margin-top: rem(24);
+}

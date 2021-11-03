@@ -1,7 +1,16 @@
-.p-map {
- padding: 0 rem(10);
-}
 
+.p-map__title {
+  font-size: rem(20);
+  font-weight: 700;
+  padding-left: rem(10);
+  border-left: 5px solid $main-color;
+  
+  @include mq(tab) {
+    font-size: rem(24);
+  
+  }
+
+}
 
 .p-map__iframe {
   width: 100%;
@@ -14,7 +23,7 @@
  .p-map__iframe::after {
    content: "";
    display: block;
-   padding-top: 188 / 375 * 100%;
+   padding-top: 208 / 375 * 100%;
  
   
  }
@@ -47,7 +56,7 @@
    width: 100%;
 
    @include mq(tab) {
-     width: calc(50% - #{rem(40) - 2});
+     width: calc(50% - #{rem(40) / 2});
    }
 }
 
@@ -57,7 +66,7 @@
 }
 .p-map__explain + .p-map__explain {
   @include mq(tab) {
-    margin-left: rem(20);
+    margin-left: rem(40);
     
   }
 
@@ -66,7 +75,7 @@
 
 .p-map__explain__block {
 display: flex;
-padding: rem(20) 0 rem(14);
+padding: rem(20) 0 rem(13);
 border-bottom: 1px solid $text-color;
 
 @include mq(tab) {

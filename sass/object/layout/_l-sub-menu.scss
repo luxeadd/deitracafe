@@ -1,0 +1,9 @@
+.l-sub-menu {
+  margin-top: rem(80);
+  
+  @include mq(tab) {
+    margin-top: rem(106);
+    
+  }
+}
+

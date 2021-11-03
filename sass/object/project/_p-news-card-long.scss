@@ -1,10 +1,10 @@
-.p-mv-card {
+.p-news-card-long {
   width: 100%;
   height: 100%;
   background: rgba($color: #fff, $alpha: 0.7);
 
 }
-.p-mv-card  a {
+.p-news-card-long  a {
   width: 100%;
   height: 100%;
   padding: rem(12);
@@ -12,22 +12,26 @@
   position: relative;
 }
 
-.p-mv-card a:hover {
-  .p-mv-card__figure img {
+.p-news-card-long a:hover {
+  .p-news-card-long__figure img {
     transform: scale(1.3) translate(-40%, -40%);
 
   }
 }
 
-.p-mv-card__figure {
+.p-news-card-long__figure {
   width: rem(100);
   height: 100%;
   position: relative;
   overflow: hidden;
+
+  @include mq(tab) {
+    width: rem(120);
+  }
   
   }
   
-  .p-mv-card__figure::before {
+  .p-news-card-long__figure::before {
     padding-top: 100 / 100 * 100%; //画像縦 / 横
     display: block;
     content: "";
@@ -39,7 +43,7 @@
   
   }
   
-  .p-mv-card__figure img {
+  .p-news-card-long__figure img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -51,11 +55,11 @@
     transition: all .3s;
   }
 
-.p-mv-card__body {
+.p-news-card-long__body {
 margin-left: rem(16);
 }
 
-.p-mv-card__title{
+.p-news-card-long__title{
 font-size: rem(12);
 font-weight: 700;
 line-height: 1.7143;
@@ -67,7 +71,7 @@ margin-top: rem(10);
 }
 
 
-.p-mv-card__category {
+.p-news-card-long__category {
   padding: rem(1) rem(11);
   background-color: $btn-color;
   color: #fff;
@@ -77,7 +81,7 @@ margin-top: rem(10);
   left: rem(-10);
 
 }
-.p-mv-card__category::before {
+.p-news-card-long__category::before {
   position: absolute;
   top: 0;
   display: block;
@@ -91,6 +95,6 @@ margin-top: rem(10);
 
 
 
-.p-mv-card__time {
+.p-news-card-long__time {
  font-size: rem(12);
 }

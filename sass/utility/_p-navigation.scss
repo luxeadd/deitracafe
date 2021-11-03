@@ -1,0 +1,35 @@
+.p-navigation {
+ position: relative;
+}
+
+.previouspostslink {
+font-size: rem(14);
+font-weight: 700;
+position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+
+}
+
+.p-navigation-home {
+  font-size: rem(14);
+  font-weight: 700;
+  line-height: 1;
+  padding: rem(10) rem(28);
+  border: 1px solid $main-color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nextpostslink {
+  font-size: rem(14);
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  right:  0;
+  transform: translateY(-50%);
+  
+}

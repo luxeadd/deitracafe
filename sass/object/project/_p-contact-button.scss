@@ -1,0 +1,44 @@
+.p-contact-button {
+ text-align: center;
+ width: 100%;
+ max-width: rem(280);
+ height: rem(72);
+ margin-left: auto;
+ margin-right: auto;
+
+ @include mq(tab) {
+   justify-content: center;
+ }
+}
+
+
+input[type="submit"] {
+  width: 100%;
+  height: 100%;
+	-webkit-appearance: none;
+	background-color: #000000;
+	background-image: none;
+	border: none;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: rem(16);
+  font-weight: 700;
+	margin: 0;
+	padding: rem(11) rem(66);
+	text-decoration: none;
+
+}
+
+
+
+.p-contact-button__submit:hover,
+.p-contact-button__submit:focus {
+	outline: none;
+}
+
+.p-contact-button__submit::-moz-foucus-inner {
+	border: none;
+	padding: 0;
+}

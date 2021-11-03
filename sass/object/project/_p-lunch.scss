@@ -1,47 +1,314 @@
 .p-lunch {
+ padding: rem(55) 0;
+ background: $base-color;
+ position: relative;
+
+ @include mq(tab) {
+   padding: rem(72) 0 rem(78);
+ }
+}
+
+.p-lunch::before {
+  content: "";
+  display: block;
+  width: rem(119);
+  height: rem(135);
+  background: url(../img/top/leaf1.png) no-repeat center center/contain;
+  position: absolute;
+  top: rem(-166);
+  right: rem(5);
+  transform: translate(40px , -10px);
+  z-index: 10;
+  
+  @include mq(tab) {
+    width: rem(201);
+    height: rem(228);
+    transform: translate(50px , -30px);
+    top: rem(-106);
+    right: rem(15);
+    
+  }
 
 }
 
+
 .p-lunch__title {
+  width: 100%;
+  max-width: rem(280);
+  text-align: center;
+  margin:  0 auto;
+  position: relative;
+  
+  @include mq(tab) {
+    max-width: rem(500);
+    
+  }
+}
+
+.p-lunch__title::before {
+  content: "";
+  display: block;
+  width: rem(208);
+  height: rem(109);
+  background: url(../img/top/lunch-text.png) no-repeat center center/contain;
+  position: absolute;
+  top: rem(-89);
+  right: rem(-27);
+  transform: translate(40px , -10px);
+  z-index: 10;
+  
+  @include mq(tab) {
+    width: rem(312);
+    height: rem(184);
+    transform: translate(0);
+    right: rem(-367);
+    top: rem(79);
+    
+  }
 
 }
 
 .p-lunch__body {
+ margin-top: rem(58);
+ background: #FFF;
+ padding: rem(7) rem(20) rem(20);
+ 
+ 
+ @include mq(tab) {
+   max-width: rem(1180);
+   margin-left: auto;
+   margin-right: auto;
+   padding: rem(29) rem(40) rem(39);
+
+ }
+}
+
+.p-lunch__body-inner {
+  text-align: center;
+  transform: translateY(-27px);
+  
+  @include mq(tab) {
+    transform: translateY(-48px);
+    
+  }
 
 }
 
+.p-lunch__sub-title-box {
+  display: inline-block;
+  position: relative;
+  height: rem(32);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.p-lunch__sub-title-box::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: -10px;
+  left: -17px;
+  z-index: 1;
+  border: 16px solid $text-color;
+  border-left-color: transparent;/*山形に切り抜き*/
+  
+  @include mq(tab) {
+    bottom: -15px;
+    left: -22px;
+    border: 18px solid $text-color;
+    border-left-color: transparent;/*山形に切り抜き*/
+    
+  }
+}
+
+.p-lunch__sub-title-box::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: -10px;
+  right: -17px;
+  z-index: 1;
+  border: 16px solid $text-color;
+  border-right-color: transparent;/*山形に切り抜き*/
+  
+  @include mq(tab) {
+    bottom: -15px;
+    right: -22px;
+    border: 18px solid $text-color;
+    border-right-color: transparent;/*山形に切り抜き*/
+    
+  }
+}
+
 .p-lunch__sub-title {
+  font-size: rem(14);
+  line-height: rem(32);
+  font-weight: 700;
+  height: rem(32);
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0 20px;
+  color: #FFF;
+  background: $text-color;/*真ん中の背景色*/
+  z-index: 2;
+
+  @include mq(tab) {
+    font-size: rem(18);
+    height: rem(37);
+    line-height: rem(37);
+  }
+}
+.p-lunch__sub-title::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-right: solid 15px $text-color;/*左の折り返し部分*/
+}
+.p-lunch__sub-title::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  right: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-left: solid 15px $text-color;/*右の折り返し部分*/
+}
+
+.p-lunch_body-box {
+  width: 100%;
+  max-width: rem(540);
+  margin: 0 auto;
+
+  @include mq(tab) {
+    max-width: 100%;
+  }
 
 }
 
 .p-lunch__body-items {
 
+  @include mq(tab) {
+    
+  }
 }
 
 .p-lunch__footer  {
+  margin: rem(20) auto 0;
+  padding: rem(29) 0 rem(20);
+  background: $base-color-gray;
+  width: 100%;
+  max-width: rem(540);
   
+  
+  @include mq(tab) {
+    max-width: 100%;
+    margin-top: rem(57);
+    padding: rem(20)  rem(10) rem(20) rem(64);
+    
+  }
+
 }
 
 .p-lunch__footer-items {
 
+  @include mq(tab) {
+    display: flex;
+  }
 }
+
 
 .p-lunch__set-img {
+ width: 100%;
+ height: 100%;
+
+ @include mq(tab) {
+   max-width: rem(710);
+ }
 
 }
 
-.p-lunch__set-box {
 
+.p-lunch__set-box {
+  margin-top: rem(20);
+  flex-direction: column;
+  justify-content: center;
+
+  @include mq(tab) {
+    margin-top: rem(6);
+    margin-left: rem(34);
+  }
 }
 
 .p-lunch__set-text {
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: 1.4375;
+  text-align: center;
 
+  @include mq(tab) {
+    font-size: rem(20);
+    line-height: 1.45;
+    text-align: left;
+    width: 100%;
+    max-width: rem(225);
+  }
+
+}
+
+.p-lunch__set-text span {
+  display: block;
+
+  @include mq(tab) {
+    text-align: right;
+    
+  }
 }
 
 .p-lunch__set-price {
+  font-size: rem(40);
+  font-family: $font-family-Damion;
+  line-height: 1.2;
+  text-align: center;
+  position: relative;
 
+  @include mq(tab) {
+    font-size: rem(60);
+
+  }
+}
+
+.p-lunch__set-price::after {
+  content: "";
+  display: block;
+  width: rem(149);
+  border-bottom: dotted 5px $main-color;
+  position: absolute;
+  bottom: rem(-15);
+  left: 50%;
+  transform: translateX(-50%);
+  
+  @include mq(tab) {
+    width: rem(223);
+    transform: translateX(0);
+    bottom: rem(-20);
+    left: 0;
+    
+  }
 }
 
 .p-lunch__set-open {
+  text-align: center;
+  margin-top: rem(22);
+  font-size: rem(12);
+  font-weight: 700;
+  
+  @include mq(tab) {
+    font-size: rem(14);
+    margin-top: rem(29);
+  }
 
 }

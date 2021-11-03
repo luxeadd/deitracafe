@@ -48,7 +48,11 @@ margin-top: rem(55);
   font-size: rem(24);
   font-family: $font-family-Patua;
   font-weight: 400;
+  transition: all .3s;
+}
 
+.p-drawer-menu__item a:hover {
+  color: $accent-color;
 }
 
 .p-drawer-menu__span {
@@ -82,5 +86,12 @@ position: relative;
 .p-drawer-menu__icon a {
   display: inline-block;
   padding: 0 rem(17.5);
+  transition: all .3s;
+  border-radius: 50%;
 
+}
+
+.p-drawer-menu__icon a:hover {
+  opacity: 0.7;
+  
 }

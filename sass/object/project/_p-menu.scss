@@ -1,0 +1,208 @@
+.p-menu {
+  padding: rem(118) 0 rem(55);
+  position: relative;
+  
+  @include mq(tab) {
+    padding: rem(153) 0 rem(84);
+    
+  }
+
+}
+
+.p-menu::before {
+  content: "";
+  display: block;
+  width:  275 / 375 * 100%;
+  height: 88%;
+  background: $base-color;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.p-menu::after {
+  content: "";
+  display: block;
+  width: rem(168);
+  height: rem(142);
+  background: url(../img/top/coffee2.png) no-repeat center center/contain;
+  position: absolute;
+  bottom: rem(-103);
+  right: rem(2);
+  transform: translate(40px , -10px);
+  z-index: 10;
+  
+  @include mq(tab) {
+    width: rem(374);
+    height: rem(359);
+    transform: translate(50px , -30px);
+    bottom: rem(-145);
+    right: rem(-65);
+    
+  }
+
+}
+
+
+.p-menu__title {
+  text-align: center;
+}
+
+
+.p-menu__body {
+  margin-top: rem(39);
+  
+  @include mq(tab) {
+    width: 100%;
+    max-width: rem(1180);
+    padding: 0 rem(40);
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+
+}
+
+.p-menu__body-item {
+ padding-bottom: rem(47);
+
+ @include mq(tab) {
+   padding-bottom: rem(106);
+ }
+}
+
+.p-menu__body-title-outline {
+  border-top: solid 2px $text-color;    	/* 内側の線になる一本線の枠線をひく*/
+  border-bottom: solid 2px $text-color;    	/* 内側の線になる一本線の枠線をひく*/
+  margin-bottom: rem(23);
+}
+
+.p-menu__body-title {
+padding: rem(1) rem(10);
+font-size: rem(20);
+font-weight: 700;
+line-height: 1.45;
+border-top: solid 1px $text-color;    	/* 内側の線になる一本線の枠線をひく*/
+border-bottom: solid 1px $text-color;    	/* 内側の線になる一本線の枠線をひく*/
+margin-top: 2px;            	/* 外側の線を広げた分、要素の大きさを調整する*/
+margin-bottom: 2px;            	/* 外側の線を広げた分、要素の大きさを調整する*/
+
+@include mq(tab) {
+  font-size: rem(24);
+  padding: rem(5) rem(20);
+
+ }
+}
+
+.p-menu__items {
+  
+}
+
+.p-menu__drink {
+ margin-top: rem(20);
+ padding-left: rem(20);
+ padding-right: rem(20);
+
+ @include mq(tab) {
+   display: flex;
+   padding: 0;
+ }
+}
+
+.p-menu__drink-body {
+  @include mq(tab) {
+    margin-left: rem(64);
+    width: 100%;
+    max-width: rem(195);
+
+  }
+}
+
+.p-menu__drink-body + .p-menu__drink-body {
+  margin-top: rem(40);
+
+  @include mq(tab) {
+    margin-top: 0;
+    margin-left: rem(50);
+  }
+}
+
+.p-menu__drink-title {
+font-size: rem(16);
+font-weight: 700;
+padding-bottom: rem(10);
+border-bottom:  1px solid $text-color;
+
+}
+
+.p-menu__drink-items {
+  margin-top: rem(10);
+  display: block;
+
+  @include mq(tab) {
+    
+  }
+  
+}
+
+.p-menu__drink-img {
+  display: none;
+
+  @include mq(tab) {
+    display: block;
+    border: 5px solid #fff;
+    width: 100%;
+    max-width: rem(339);
+    position: relative;
+  }
+}
+
+.p-menu__drink-img::before {
+  padding-top: 400 / 400 * 100%; //画像縦 / 横
+  display: block;
+  content: "";
+
+}
+
+.p-menu__drink-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.p-menu__drink-item {
+  display: flex;
+  align-items: center;
+  margin-top: rem(3);
+}
+
+.p-menu__drink-menu {
+  font-size: rem(14);
+  font-weight: 700;
+  width: rem(100);
+}
+
+.p-menu__drink-price {
+  font-size: rem(20);
+  font-weight: 400;
+  font-family: $font-family-Damion;
+  margin-left: auto;
+
+}
+
+.p-menu__btn {
+ @include mq(tab) {
+   margin-top: rem(-42);
+ }
+}
+
+.p-menu__btn a {
+  margin:  0 auto;
+}

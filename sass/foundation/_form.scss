@@ -38,14 +38,14 @@ input[type="datetime"],
 input[type="week"],
 textarea,
 select {
-	margin-right: 0;
-	margin-left: 0;
-	padding: 4px;
-	border: 1px solid #ccc;
-	border-radius: 0;
+	// margin-right: 0;
+	// margin-left: 0;
+	// padding: 4px;
+	// border: 1px solid #ccc;
+	// border-radius: 0;
 	outline: none;
-	background: none;
-	font-size: 16px;
+	// background: none;
+	// font-size: 16px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -94,34 +94,34 @@ select {
 }
 
 /* radio & checkbox */
-input[type="radio"],
-input[type="checkbox"] {
-	display: none;
-}
-input[type="radio"] + span,
-input[type="checkbox"] + span {
-	display: inline-block;
-	position: relative;
-	margin-left: 8px;
-	padding: 10px 20px;
-	color: #555;
-	font-size: 1.4rem;
-	text-align: center;
-	line-height: 1;
-	cursor: pointer;
-}
-input[type="radio"] + span::before,
-input[type="checkbox"] + span::before {
-	position: absolute;
-	top: 50%;
-	left: -8px;
-	width: 16px;
-	height: 16px;
-	content: "";
-	margin-top: -8px;
-	border: 1px solid #ccc;
-	background: #fff;
-}
+// input[type="radio"],
+// input[type="checkbox"] {
+// 	display: none;
+// }
+// input[type="radio"] + span,
+// input[type="checkbox"] + span {
+// 	display: inline-block;
+// 	position: relative;
+// 	margin-left: 8px;
+// 	padding: 10px 20px;
+// 	color: #555;
+// 	font-size: 1.4rem;
+// 	text-align: center;
+// 	line-height: 1;
+// 	cursor: pointer;
+// }
+// input[type="radio"] + span::before,
+// input[type="checkbox"] + span::before {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: -8px;
+// 	width: 16px;
+// 	height: 16px;
+// 	content: "";
+// 	margin-top: -8px;
+// 	border: 1px solid #ccc;
+// 	background: #fff;
+// }
 
 /* fieldset */
 fieldset {
@@ -189,43 +189,43 @@ select:hover {
 
 input[type="radio"] + span:hover,
 input[type="checkbox"] + span:hover  {
-	color: #000;
+	// color: #000;
 }
 input[type="radio"] + span:hover::before,
 input[type="checkbox"] + span:hover::before {
-	border-color: #000;
+	// border-color: #000;
 }
 input[type="radio"] + span:hover::after,
 input[type="checkbox"] + span:hover::after {
-	position: absolute;
-	content: "";
-	top: 50%;
-	left: -4px;
-	width: 8px;
-	height: 8px;
-	margin-top: -4px;
-	background: #ccc;
+	// position: absolute;
+	// content: "";
+	// top: 50%;
+	// left: -4px;
+	// width: 8px;
+	// height: 8px;
+	// margin-top: -4px;
+	// background: #ccc;
 }
 
 /* checked */
 input[type="radio"]:checked + span,
 input[type="checkbox"]:checked + span {
-	color: #3498db;
+	// color: #3498db;
 }
 input[type="radio"]:checked + span::before,
 input[type="checkbox"]:checked + span::before {
-	border-color: #3498db;
+	// border-color: #3498db;
 }
 input[type="radio"]:checked + span::after,
 input[type="checkbox"]:checked + span::after {
-	position: absolute;
-	content: "";
-	top: 50%;
-	left: -4px;
-	width: 8px;
-	height: 8px;
-	margin-top: -4px;
-	background: #3498db;
+	// position: absolute;
+	// content: "";
+	// top: 50%;
+	// left: -4px;
+	// width: 8px;
+	// height: 8px;
+	// margin-top: -4px;
+	// background: #3498db;
 }
 
 /* radio */
@@ -241,13 +241,13 @@ input[type="radio"]:checked + span::after {
 /* focus */
 input:focus,
 textarea:focus {
-	border-color: #3498db;
+	// border-color: #3498db;
 }
 input[type="submit"]:focus,
 input[type=reset]:focus,
 input[type="button"]:focus,
 input[type="search"]:focus {
-	outline-offset: -2px;
+	// outline-offset: -2px;
 }
 
 /* disabled */
@@ -278,3 +278,21 @@ input:required {}
 input::-webkit-input-placeholder {}
 input::-moz-placeholder {}
 input:-ms-input-placeholder {}
+
+   //必須未入力箇所背景色変更
+   [type="text"].wpcf7-not-valid,
+   [type="email"].wpcf7-not-valid,
+   textarea.wpcf7-not-valid {
+      background: #FFDCDC;
+   }
+
+   //必須未入力メッセージ色、位置変更
+   .wpcf7-response-output {
+    text-align: center;
+    color: #FF5757;
+   }
+
+   //必須未入力箇所囲み線なし
+   .wpcf7 form .wpcf7-response-output{
+     border: none;
+   }

@@ -1,0 +1,30 @@
+.p-privacy-policy {
+  width: 100%;
+  height: rem(200);
+  border: 1px solid $main-color;
+  background: #fff;
+  overflow-y: scroll;
+  
+  @include mq(tab) {  
+    max-width: rem(490);
+    margin-left: auto;
+    }
+  }
+  
+  
+  .p-privacy-policy__content {
+    height: inherit;  
+    padding: rem(10);
+  }
+  
+  .p-privacy-policy__text{
+    font-size: rem(14);
+    letter-spacing: 0.04em;
+    line-height: 1.7142;
+  
+    @include mq(tab) {
+      font-size: rem(16);
+      
+    }
+  
+  }

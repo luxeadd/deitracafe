@@ -1,0 +1,64 @@
+.p-news {
+  position: relative;
+  padding: rem(114) 0 rem(163) ;
+  
+  @include mq(tab) {
+  padding: rem(114) 0 rem(175) ;
+  
+}
+}
+
+.p-news::before {
+  content: "";
+  display: block;
+  width: rem(204);
+  height: rem(185);
+  background: url(../img/top/bg-salada.png) no-repeat center center/contain;
+  position: absolute;
+  top: rem(-7);
+  left: rem(-48);
+  z-index: 10;
+  
+  @include mq(tab) {
+    width: rem(355);
+    height: rem(335);
+    top: rem(-155);
+    left: rem(-91);
+    
+  }
+
+}
+
+
+.p-news__title {
+text-align: center;
+}
+
+.p-news__body{
+margin-top: rem(39);
+
+@include mq(tab) {
+  width: 100%;
+  max-width: rem(1180);
+  padding: 0 rem(40);
+  margin: rem(39) auto 0; 
+}
+}
+
+.p-news__body-item {
+
+}
+
+.p-news__btn {
+  margin-top: rem(40);
+  
+  @include mq(tab) {
+    margin-top: rem(76);
+  
+}
+
+}
+
+.p-news__btn a {
+  margin:  0 auto;
+}

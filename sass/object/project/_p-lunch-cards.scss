@@ -1,17 +1,24 @@
 .p-lunch-cards {
   display: flex;
   flex-wrap: wrap;
-  margin-left: rem(-19);
+  margin-left: rem(-20);
   margin-top: rem(-20);
  }
  
  .p-lunch-cards__item{
- width: calc(50% - #{rem(19) * 2 / 2});
- margin-left: rem(19);
+ width: calc(50% - #{rem(20) * 2 / 2});
+ margin-left: rem(20);
  margin-top: rem(20);
  
  @include mq(tab) {
-   width: calc(33% - #{rem(32) * 3 / 3});
-    margin-left: rem(32);
+   width: calc(25% - #{rem(20) * 4 / 4});
+    margin-left: rem(20);
  }
+ }
+
+ .p-lunch-cards__item:nth-child(even) {
+    @include mq(tab) {
+      margin-top: rem(61);
+    }
+
  }

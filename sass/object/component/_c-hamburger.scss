@@ -15,13 +15,14 @@ $hamburger-color2: #382620; //展開時ボランカラー
   border-radius: 50%;
   outline: none;
   -webkit-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
  
 
-@include mq(tab) {
-  display: none;
 }
-}
+        
+
+
+
 
 .c-hamburger:hover,
 .c-hamburger:focus {  

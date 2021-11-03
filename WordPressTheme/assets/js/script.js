@@ -39,9 +39,17 @@ drawerMenuItem.addEventListener('click', () => {
 jQuery(window).on('scroll', function () {
 	var MV =  jQuery(".js-mv").innerHeight(); //headerの高さ取得 
 	if (  MV <  jQuery(this).scrollTop()) { 
-	jQuery('.js-header').addClass('change-color'); }
+	jQuery('.p-header__drawer-top').addClass('display'); }
 	else {
-	jQuery('.js-header').removeClass('change-color'); } 
+	jQuery('.p-header__drawer-top').removeClass('display'); } 
+	});
+
+jQuery(window).on('scroll', function () {
+
+	if (  5 <  jQuery(this).scrollTop()) { 
+	jQuery('.p-header__logo-top').addClass('logo-none'); }
+	else {
+	jQuery('.p-header__logo-top').removeClass('logo-none'); } 
 	});
 
 
@@ -122,4 +130,67 @@ var topBtn = $('#js-page-top');
     }, 300, 'swing');
     return false;
   });
+
+
+	//swiper
+	let slider1 = new Swiper ('.slider1', {
+		//自動スライド
+				autoplay: {
+					delay: 2000,
+				},
+		 //切り替えエフェクトの指定
+			//slide  fade  cube coverflow  flip
+			effect: "fade",
+		 
+			//切り替わる速さ
+			speed: 4000,
+			
+			//ループの有無
+			loop: true,
+		
+			// If we need pagination
+			pagination: {
+			 el: '.swiper-pagination',
+				clickable : true,
+			 },
+			
+			// Navigation arrows
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			 },
+			// And if we need scrollbar
+			// scrollbar: {
+			// el: '.swiper-scrollbar',
+			// },
+		
+		//ビューごとのスライド
+		 // speed: 600,
+			//loopedSlides: 6,
+			//sp
+			//spaceBetween: 24,
+			//width: 274,
+			//pc,tab
+			//breakpoints: {
+				//768: {
+					//spaceBetween: 40,
+					//width: 400,
+				//}
+		 //}
+ });
+ let slider2 = new Swiper ('.slider2', {
+		//各種設定
+ 
+ });
+ let slider3 = new Swiper ('.slider3', {
+		//各種設定
+ 
+ });
+ let slider4 = new Swiper ('.slider4', {
+		//各種設定
+ 
+ });
+
+
+
 });

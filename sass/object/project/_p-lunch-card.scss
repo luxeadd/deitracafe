@@ -20,7 +20,6 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  border: 10px solid #fff;
   
   }
   
@@ -46,6 +45,7 @@
 
 .p-lunch-card__body {
  padding: rem(8) 0 0;
+ display: flex;
  
  @include mq(tab) {
    padding: rem(12) 0 0;
@@ -53,31 +53,39 @@
  }
 }
 
+.p-lunch-card__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family-Patua;
+  font-size: rem(19);
+  background: $text-color;
+  color: #fff;
+  width: rem(44);
+  height: rem(24);
+  font-weight: 400;
+  
+  @include mq(tab) {
+    width: rem(72);
+    height: rem(49);
+    font-size: rem(32);
+    margin-top: rem(5);
+
+    
+  }
+
+}
+
 .p-lunch-card__title{
 font-size: rem(14);
 font-weight: 700;
 line-height: 1.4286;
+margin-left: rem(6);
 
 @include mq(tab) {
-  font-size: rem(20);
+  font-size: rem(18);
+  margin-left: rem(15);
+  padding-top: rem(6);
 }
 }
 
-.p-lunch-card__footer{
-  display: flex;
-  align-items: center;
-  margin-top: auto;
-  justify-content: center;
-  
-}
-
-.p-lunch-card__copy{
-  font-size: rem(24);
-  font-family: $font-family-Damion;
-  margin-top: rem(5);
-
-@include mq(tab) {
-  font-size: rem(32);
-margin-top: rem(7);
-}
-}

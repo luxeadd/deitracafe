@@ -1,0 +1,58 @@
+.p-sub-menu {
+  padding-bottom: rem(160);
+
+  @include mq(tab) {
+    padding-bottom: rem(170);
+  }
+}
+
+.p-sub-menu__head {
+
+  @include mq(tab) {
+    max-width: rem(840);
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.p-sub-menu__tabs{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: rem(-12);
+  margin-top: rem(-12);
+
+  @include mq(tab) {
+    margin-top: 0;
+    margin-left: rem(-14);
+  }
+
+}
+
+.p-sub-menu__tab {
+  width: calc(50% - #{rem(12)} * 2 / 2);
+  margin-left: rem(12);
+  margin-top: rem(12);
+  
+  @include mq(tab) {
+    width: calc(25% - #{rem(14)} * 4 / 4);
+    margin-left: rem(14);
+    margin-top: 0;
+    
+  }
+}
+
+.p-sub-menu__body{
+   margin-top: rem(60);
+
+   @include mq(tab) {
+     margin-top: rem(80);
+
+   }
+}
+
+.p-sub-menu__body-item {
+  .p-menu-card__figure {
+    border: none;
+  }
+}
+

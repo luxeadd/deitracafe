@@ -5,9 +5,125 @@
   left: 0;
 }
 
-.p-top-mv__img{
+.p-top-mv::after {
+display: none;
+  @include mq(tab) {
+    
+    content: "";
+    display: block;
+    width: 984 / 1280 * 100%;
+    height: 100vh;
+    background: $base-color;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+  }
+  }
+
+.p-top-mv__wrapper {
+  @include mq(tab) {
+    display: flex;
+    
+  }
+
+}
+
+.p-top-mv__nav {
+  display: none;
+  @include mq(tab) {
+   display: block; 
+    width: 100%;
+    max-width: rem(200);
+    padding: rem(20);
+  }
+}
+
+.p-top-mv__logo {
+width: 100%;
+max-width: rem(160);
+margin-top: rem(9);
+
+}
+
+.p-top-mv__nav-items {
+  margin-top: rem(28);
+}
+
+.p-top-mv__nav-item {
+ text-align: center;
+}
+
+.p-top-mv__nav-item a {
+  display: block;
+  padding: rem(11) 0;
+  transition: 0.3s;
+
+}
+
+.p-top-mv__nav-item a:hover {
+  color: $accent-color;
+}
+
+.p-top-mv__nav-item + .p-top-mv__nav-item {
+
+}
+
+.p-top-mv__nav-en {
+ display: block;
+ font-size: rem(18);
+ font-weight: 400;
+ text-transform: uppercase;
+font-family: $font-family-Patua;
+letter-spacing: 0.12em;
+
+}
+
+.p-top-mv__nav-ja {
+  display: block;
+  font-size: rem(10);
+  font-weight: 500;
+  margin-top: rem(4);
+
+}
+
+.p-top-mv__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(36);
+  margin-left: rem(-25);
+}
+
+.p-top-mv__icon{
+width: rem(20);
+height: rem(20);
+margin-left: rem(25);
+}
+
+.p-top-mv__icon a {
+  display: inline-block;
+  padding-left: rem(12);
+  padding-right: rem(12);
   width: 100%;
   height: 100%;
+  transition: all .3s;
+
+}
+
+.p-top-mv__icon a:hover {
+  opacity: 0.7;
+}
+
+
+.p-top-mv__img{
+  width: 100%;
+  height: 100vh;
+
+  @include mq(tab) {
+    height: 93vh;
+    
+  }
   
 
 }
@@ -27,6 +143,16 @@
  line-height: 2;
  letter-spacing: 0.14em;
  color: #fff;
+ 
+ @include mq(tab) {
+   top: initial;
+   bottom: 111px;
+   left: rem(257);
+   font-size: rem(20);
+   font-weight: bold;
+
+   
+ }
 
 }
 
@@ -35,10 +161,25 @@
  bottom: rem(32);
  right: rem(20);
  left: rem(20);
+ width: 100%;
+ margin-left: auto;
+ max-width: rem(540);
+
+ @include mq(tab) {
+   bottom: 83px;
+   max-width: rem(388);
+ }
 }
 
 .p-top-mv__item {
  position: relative;
+ width: 100%;
+ 
+ 
+ @include mq(tab) {
+ 
+   
+ }
 }
 
 .p-top-mv__item::before {
@@ -50,5 +191,11 @@
   position: absolute;
   top: rem(-41);
   right: rem(-9);
+  
+  @include mq(tab) {
+    width: rem(180);
+    height: rem(105);
+    top: rem(-76);
+  }
 
 }

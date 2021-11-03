@@ -1,0 +1,61 @@
+@keyframes zoom {
+  from {
+      transform: scale(1.2);
+  }
+
+  to {
+      transform: scale(1);
+  }
+}
+
+
+.slider1 {
+  position: relative;
+  z-index: -1;
+   @include mq(tab) {
+   
+   }
+
+  .swiper-wrapper {
+
+      .swiper-slide {
+          overflow: hidden;
+
+      }
+      
+      //Prevスライド
+      .swiper-slide-prev,
+      //Activeスライド
+      .swiper-slide-active,
+      //ループ時に複製される正面のスライド
+      .swiper-slide-duplicate-active {
+
+          img {
+              animation-name: zoom;
+              animation-duration: 8s;
+              animation-fill-mode: forwards;
+          }
+      }
+  }
+
+  .swiper-pagination {
+    text-align: left;
+    margin-left: rem(20);
+  }
+
+  .swiper-pagination-bullet {
+    margin-left: 6px;
+    margin-right: 6px;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active  {
+    background: #D59B71;
+  }
+}
+
+
+

@@ -1,0 +1,292 @@
+.p-sub-concept {
+padding-bottom: rem(160);
+
+@include mq(tab) {
+  padding-bottom: rem(174);
+}
+
+}
+
+.p-sub-concept__body {
+  position: relative;
+  @include mq(tab) {
+    display: flex;
+    
+  }
+}
+
+.p-sub-concept__body:first-child {
+ padding-bottom: rem(50);  
+
+ @include mq(tab) {
+   padding-bottom: rem(101);
+ }
+}
+.p-sub-concept__body:nth-child(2) {
+ padding-bottom: rem(20);  
+
+ @include mq(tab) {
+   flex-direction: row-reverse;
+   padding-bottom: rem(60);
+ }
+}
+.p-sub-concept__body:nth-child(3) {
+ padding-bottom: rem(39);  
+
+ @include mq(tab) {
+   padding-bottom: rem(79);
+ }
+}
+
+.p-sub-concept__body:first-child::after {
+  content: "";
+  display: block;
+  width: 375 / 375 * 100%;
+  height: 10%;
+  background: $base-color;
+  position: absolute;
+  right: rem(-20);
+  bottom: 0;
+  z-index: -1;
+
+  @include mq(tab) {
+    width: 83%;
+    height: 24%;
+
+  }
+}
+.p-sub-concept__body:nth-child(2):after {
+  content: "";
+  display: block;
+  width: 85%;
+  height: 32%;
+  background: $base-color;
+  position: absolute;
+  left: rem(-20);
+  bottom: 0;
+  z-index: -1;
+
+  @include mq(tab) {
+    width: 53%;
+    height: 73%;
+    left: rem(-90);
+  }
+}
+.p-sub-concept__body:nth-child(3):after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 45%;
+  background: $base-color;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  @include mq(tab) {
+    width: 36%;
+    height: 100%;
+    right: rem(-90);
+  }
+}
+
+.p-sub-concept__body + .p-sub-concept__body{
+  margin-top: rem(75);
+
+  @include mq(tab) {
+    margin-top: rem(100);
+  }
+}
+
+.p-sub-concept__body:first-child > .p-sub-concept__text-box{
+ 
+  @include mq(tab) {
+    width: 100%;
+    max-width: rem(460);
+    padding-right: rem(71);
+    padding-top: rem(92);
+
+  }
+}
+.p-sub-concept__body:nth-child(2) > .p-sub-concept__text-box{
+ 
+  @include mq(tab) {
+    width: 100%;
+    max-width: rem(460);
+    padding-left: rem(71);
+    padding-top: rem(68);
+
+  }
+}
+.p-sub-concept__body:nth-child(3) > .p-sub-concept__text-box{
+ 
+  @include mq(tab) {
+    width: 100%;
+    max-width: rem(460);
+    padding-right: rem(71);
+    padding-top: rem(92);
+
+    @include mq(tab) {
+      padding-top: rem(70);
+    }
+
+  }
+}
+
+.p-sub-concept__title{
+ font-size: rem(20);
+ font-weight: 700;
+ line-height: 2;
+
+ @include mq(tab) {
+   font-size: rem(28);
+   line-height: 2.14;
+
+ }
+
+}
+
+.p-sub-concept__text{
+ margin-top: rem(30);
+ font-size: rem(14);
+ line-height: 2;
+
+}
+
+.p-sub-concept__img-box {
+  margin-top: rem(36);
+
+  @include mq(tab) {
+    width: 100%;
+    max-width: rem(640);
+    margin-top: 0;
+    
+  }
+
+}
+
+.p-sub-concept__img-items1{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: rem(-10);
+  margin-left: rem(-10);
+
+  @include mq(tab) {
+    margin-top: rem(-18);
+    margin-left: rem(-18);
+  }
+
+}
+
+.p-sub-concept__img1 {
+  width: 100%;
+  position: relative;
+  margin-top: rem(10);
+  margin-left: rem(10);
+
+  @include mq(tab) {
+    margin-top: rem(18);
+    margin-left: rem(18);
+  }
+
+  
+  }
+  
+  .p-sub-concept__img1::before {
+    padding-top: 209 / 335 * 100%; //画像縦 / 横
+    display: block;
+    content: "";
+  
+  }
+  
+  .p-sub-concept__img1 img,
+  .p-sub-concept__img2 img,
+  .p-sub-concept__img3 img
+   {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+.p-sub-concept__img1 + .p-sub-concept__img1 {
+ width: calc(50% - #{rem(10)} * 2 / 2);
+ 
+ @include mq(tab) {
+   width: calc(50% - #{rem(18)} * 2 / 2);
+   
+ }
+}
+
+.p-sub-concept__img1 + .p-sub-concept__img1::before {
+  padding-top: 162 / 162 * 100%; //画像縦 / 横
+    display: block;
+    content: "";
+}
+
+.p-sub-concept__img-items2{
+
+}
+
+.p-sub-concept__img2:first-child {
+  width: 84%;
+  position: relative;
+  margin-left: auto;
+  
+  }
+.p-sub-concept__img2 + .p-sub-concept__img2 {
+  width: 54%;
+  position: relative;
+  margin-top: rem(-67);
+
+  @include mq(tab) {
+    margin-top: rem(-127);
+  }
+  
+  }
+  
+  .p-sub-concept__img2::before {
+    padding-top: 212 / 283 * 100%; //画像縦 / 横
+    display: block;
+    content: "";
+  
+  }
+  .p-sub-concept__img2 + .p-sub-concept__img2::before {
+    padding-top: 138 / 183 * 100%; //画像縦 / 横
+    display: block;
+    content: "";
+  
+  }
+.p-sub-concept__img-items3{
+
+}
+
+.p-sub-concept__img3 {
+  width: 89%;
+  position: relative;
+  margin-left: rem(-10);
+
+  @include mq(tab) {
+    margin-top: rem(40);
+    margin-left: auto;
+    width: 100%;
+  
+  }
+ 
+  }
+  
+  .p-sub-concept__img3::before {
+    padding-top: 184 / 294 * 100%; //画像縦 / 横
+    display: block;
+    content: "";
+    
+    @include mq(tab) {
+      padding-top: 400 / 640 * 100%; //画像縦 / 横
+      
+    }
+  
+  }
