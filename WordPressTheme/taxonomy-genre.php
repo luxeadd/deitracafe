@@ -59,6 +59,7 @@
         the_post(); ?>
 
     <article class="p-sub-menu-cards__item p-menu-card">
+   
         <div class="p-menu-card__header">
           <figure class="p-menu-card__figure">
             <<?php
@@ -77,6 +78,7 @@
             <?php echo SCF::get( 'menuprice' );?>
             </p>
          </div><!-- /.p-menu-card__footer -->
+      
     </article>
 
     <?php

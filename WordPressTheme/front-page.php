@@ -11,6 +11,11 @@
         ?>
 
 
+<div class="loader-wrap">
+      <div class="loader-img">
+      <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/logo_dark.svg" alt="サイトロゴ">
+      </div>
+    </div><!-- /.loader-wrap -->
 
 <main class="l-overflow">
 
@@ -117,42 +122,42 @@
             </div><!-- /.p-top-mv__img -->
           </div>
         </div> <!-- Swiper-wrapper -->
-  
-
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-    </div> <!-- Swiper -->
-
-
-
-      
+        
+        
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div> <!-- Swiper -->
     </div><!-- /.p-top-mv__wrapper -->
+
     
-      <h2 class="p-top-mv__title">パスタとコーヒーが<br class="sp-only">とってもおいしい、<br>ほっと落ち着くのんびり空間。</h2><!-- /.p-mv__title -->
-      <div class="l-inner">
+    <h2 class="p-top-mv__title">パスタとコーヒーが<br class="sp-only">とってもおいしい、<br>ほっと落ち着くのんびり空間。</h2><!-- /.p-mv__title -->
+    <div class="l-inner">
       <div class="p-top-mv__body">
         
-      <?php
+        <?php
 $news_query = new WP_Query(
-	array(
-		'post_type'      => 'post', 
+  array(
+    'post_type'      => 'post', 
 		'posts_per_page' => 1, 
     'tag_id' => 'pickup', 
-	)
-);
-?>
+    )
+  );
+  ?>
 <?php if ( $news_query->have_posts() ) : ?>
 	<?php while ( $news_query->have_posts() ) : ?>
 		<?php $news_query->the_post(); ?>
-
-        <article class="p-top-mv__item p-news-card-long">
-          <a href="<?php the_permalink(); //記事のリンクを表示 ?>">
-            <div class="p-news-card-long__header">
-              <figure class="p-news-card-long__figure">
-              <?php
+    
+    <article class="p-top-mv__item p-news-card-long">
+      <div class="p-top-mv__balloon">
+        <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/mv-text.png" alt="吹き出し">
+      </div><!-- /.p-top-mv__balloon -->
+      <a href="<?php the_permalink(); //記事のリンクを表示 ?>">
+      <div class="p-news-card-long__header">
+        <figure class="p-news-card-long__figure">
+          <?php
                 if (has_post_thumbnail() ) {
-                // アイキャッチ画像が設定されてれば大サイズで表示
-                the_post_thumbnail('large');
+                  // アイキャッチ画像が設定されてれば大サイズで表示
+                  the_post_thumbnail('large');
                 } 
                 ?>
               </figure>
@@ -165,12 +170,12 @@ $news_query = new WP_Query(
                 // カテゴリー１つ目の名前を表示
                 $category = get_the_category();
                 if ($category[0] ) {
-                echo '<div class="p-news-card-long__category">' . $category[0]->cat_name . '</div>';
+                  echo '<div class="p-news-card-long__category">' . $category[0]->cat_name . '</div>';
                 }
                 ?>
           </a>
         </article>
-
+        
         <?php endwhile; ?>
         <?php endif; ?>
         <?php wp_reset_postdata(); ?> 
@@ -185,29 +190,29 @@ $news_query = new WP_Query(
       <div class="p-concept__body">
         
         <div class="p-concept__text-body">
-          <div class="p-concept__title p-section-title">
-            <h2>
+          <div class="p-concept__title  p-section-title">
+            <h2 class="js-scrollAnimation">
               <span class="p-section-title__en">concept</span>
               <span class="p-section-title__jp">当店のこだわり</span>
             </h2><!-- /.p-section-title__en -->
           </div><!-- /.p-concept__title -->
-          <h3 class="p-concept__sub-title">
+          <h3 class="p-concept__sub-title js-scrollAnimation">
             最高のコーヒーと、<br>時の流れを味わうことができる<br>手作りカフェ
           </h3><!-- /.p-concept__sub-title -->
-          <p class="p-concept__text">
+          <p class="p-concept__text js-scrollAnimation">
             ダミー_国内外から賞賛を<br>受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。<br>
             ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。
           </p><!-- /.p-concept__text -->
-          <p class="p-concept__text">
+          <p class="p-concept__text js-scrollAnimation">
             ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。
           </p><!-- /.p-concept__text -->
           
-          <div class="p-concept__btn c-btn-base">
+          <div class="p-concept__btn c-btn-base js-scrollAnimation">
             <a href="<?php echo $concept ?>" class="c-btn-base__link">詳しくはこちら</a><!-- /.c-btn-base__link -->
           </div>
         </div>
         
-        <div class="p-concept__img">
+        <div class="p-concept__img js-scrollAnimation">
           <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/concept-img.jpg" alt="当店のこだわり画像">
         </div><!-- /.p-concept__img -->
         
@@ -217,15 +222,18 @@ $news_query = new WP_Query(
   
   
   <section class="l-lunch p-lunch">
-    <div class="p-lunch__title p-section__title">
-      <h2>
+    <div class="p-lunch__title  p-section-title">
+      <h2 class="js-scrollAnimation">
         <span class="p-section-title__en">special lunch set</span>
-        <span class="p-section-title__jp">今月のスペシャルランチセット</span>
+        <span class="p-section-title-__p">今月のスペシャルランチセット</span>
       </h2><!-- /.p-section-title__en -->
+      <div class="p-lunch__balloon js-scrollAnimation">
+            <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/lunch-text.png" alt="吹き出し">
+          </div><!-- /.p-access__balloon -->
     </div><!-- /.p-lunch__title -->
     <div class="p-lunch__body">
       <div class="p-lunch__body-inner">
-        <div class="p-lunch__sub-title-box">
+        <div class="p-lunch__sub-title-box js-scrollAnimation">
           <h3 class="p-lunch__sub-title">お好きなパスタをお選びください</h3><!-- /.p-lunch__sub-title -->
         </div><!-- /.p-lunch__body-inner -->
       </div><!-- /.p-lunch__sub-title -->
@@ -233,8 +241,8 @@ $news_query = new WP_Query(
 
         <div class="p-lunch__body-items p-lunch-cards">
           
-          <article class="p-lunch-cards__item p-lunch-card">
-            <a href="">
+          <article class="p-lunch-cards__item p-lunch-card js-scrollAnimation">
+          
               <div class="p-lunch-card__header">
                 <figure class="p-lunch-card__figure">
                 <img src="<?php $aLunchImage = scf::get('a-lunch-image'); echo wp_get_attachment_url( $aLunchImage ); ?>" alt="Aランチ画像" >
@@ -244,10 +252,10 @@ $news_query = new WP_Query(
                 <div class="p-lunch-card__number">A</div><!-- /.p-lunch-card__number -->
                 <h3 class="p-lunch-card__title"><?php echo SCF::get( 'a-lunch-title');?></h3>
               </div><!-- /.p-lunch-card__body -->
-            </a>
+           
           </article>
-          <article class="p-lunch-cards__item p-lunch-card">
-            <a href="">
+          <article class="p-lunch-cards__item p-lunch-card js-scrollAnimation">
+            
               <div class="p-lunch-card__header">
                 <figure class="p-lunch-card__figure">
                   <img src="<?php $bLunchImage = scf::get('b-lunch-image'); echo wp_get_attachment_url( $bLunchImage ); ?>" alt="Bランチ画像" >
@@ -257,11 +265,11 @@ $news_query = new WP_Query(
                 <div class="p-lunch-card__number">B</div><!-- /.p-lunch-card__number -->
                 <h3 class="p-lunch-card__title"><?php echo SCF::get( 'b-lunch-title');?></h3>
               </div><!-- /.p-lunch-card__body -->
-            </a>
+            
           </article>
         </article>
-        <article class="p-lunch-cards__item p-lunch-card">
-          <a href="">
+        <article class="p-lunch-cards__item p-lunch-card js-scrollAnimation">
+        
             <div class="p-lunch-card__header">
               <figure class="p-lunch-card__figure">
                 <img src="<?php $cLunchImage = scf::get('c-lunch-image'); echo wp_get_attachment_url( $cLunchImage ); ?>" alt="Cランチ画像" >
@@ -271,11 +279,11 @@ $news_query = new WP_Query(
               <div class="p-lunch-card__number">C</div><!-- /.p-lunch-card__number -->
               <h3 class="p-lunch-card__title"><?php echo SCF::get( 'c-lunch-title');?></h3>
             </div><!-- /.p-lunch-card__body -->
-          </a>
+        
         </article>
       </article>
-      <article class="p-lunch-cards__item p-lunch-card">
-        <a href="">
+      <article class="p-lunch-cards__item p-lunch-card js-scrollAnimation">
+       
           <div class="p-lunch-card__header">
             <figure class="p-lunch-card__figure">
               <img src="<?php $dLunchImage = scf::get('d-lunch-image'); echo wp_get_attachment_url( $dLunchImage ); ?>" alt="Dランチ画像" >
@@ -285,14 +293,14 @@ $news_query = new WP_Query(
             <div class="p-lunch-card__number">D</div><!-- /.p-lunch-card__number -->
             <h3 class="p-lunch-card__title"><?php echo SCF::get( 'd-lunch-title' );?></h3>
           </div><!-- /.p-lunch-card__body -->
-        </a>
+       
       </article>
       
     </div><!-- /.p-lunch__body-items -->
   </div><!-- /.p-lunch_body-box -->
     
     <div class="p-lunch__footer">
-      <div class="p-lunch__footer-items">
+      <div class="p-lunch__footer-items js-scrollAnimation">
         <div class="p-lunch__set-img">
           <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/lunch.png" alt="">
         </div><!-- /.p-lunch__set-img -->
@@ -309,9 +317,12 @@ $news_query = new WP_Query(
 
 
 <section class="l-menu p-menu">
+  <div class="p-menu__leaf">
+    <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/leaf2.png" alt="">
+  </div><!-- /.p-menu__leaf -->
   <div class="l-inner">
-  <div class="p-menu__title p-section__title">
-      <h2>
+  <div class="p-menu__title p-section-title">
+      <h2 class="js-scrollAnimation">
         <span class="p-section-title__en">grand menu</span>
         <span class="p-section-title__jp">グランドメニュー</span>
       </h2><!-- /.p-section-title__en -->
@@ -319,9 +330,9 @@ $news_query = new WP_Query(
     <div class="p-menu__body">
       <div class="p-menu__body-item">
         <div class="p-menu__body-title-outline">
-          <h3 class="p-menu__body-title">パスタ</h3><!-- /.p-menu__body-title -->
+          <h3 class="p-menu__body-title js-scrollAnimation">パスタ</h3><!-- /.p-menu__body-title -->
         </div><!-- /.p-menu__body-title-outline -->
-        <div class="p-menu__items p-menu-cards">
+        <div class="p-menu__items  p-menu-cards">
 
 
         <?php
@@ -344,7 +355,8 @@ $news_query = new WP_Query(
           <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
 
-          <article class="p-menu-cards__item p-menu-card">
+          <article class="p-menu-cards__item js-scrollAnimation p-menu-card">
+           
               <div class="p-menu-card__header">
                 <figure class="p-menu-card__figure">
                 <?php
@@ -361,6 +373,7 @@ $news_query = new WP_Query(
                 <div class="p-menu-card__footer">
                   <p class="p-menu-card__copy"><?php echo SCF::get( 'menuprice' );?></p>
               </div><!-- /.p-menu-card__footer -->
+        
           </article>
           
     <?php endwhile; ?>
@@ -370,7 +383,7 @@ $news_query = new WP_Query(
       </div><!-- /.p-menu__body-item -->
       <div class="p-menu__body-item">
         <div class="p-menu__body-title-outline">
-          <h3 class="p-menu__body-title">サラダ</h3><!-- /.p-menu__body-title -->
+          <h3 class="p-menu__body-title js-scrollAnimation">サラダ</h3><!-- /.p-menu__body-title -->
         </div><!-- /.p-menu__body-title-outline -->
         <div class="p-menu__items p-menu-cards">
 
@@ -394,7 +407,8 @@ $news_query = new WP_Query(
           <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
 
-          <article class="p-menu-cards__item p-menu-card">
+          <article class="p-menu-cards__item js-scrollAnimation p-menu-card">
+         
               <div class="p-menu-card__header">
                 <figure class="p-menu-card__figure">
                 <?php
@@ -411,6 +425,7 @@ $news_query = new WP_Query(
                 <div class="p-menu-card__footer">
                   <p class="p-menu-card__copy"><?php echo SCF::get( 'menuprice' );?></p>
               </div><!-- /.p-menu-card__footer -->
+           
           </article>
           
     <?php endwhile; ?>
@@ -421,7 +436,7 @@ $news_query = new WP_Query(
         </div><!-- /.p-menu-cards -->
       </div><!-- /.p-menu__body-item --><div class="p-menu__body-item">
         <div class="p-menu__body-title-outline">
-          <h3 class="p-menu__body-title">パン＆スイーツ</h3><!-- /.p-menu__body-title -->
+          <h3 class="p-menu__body-title js-scrollAnimation">パン＆スイーツ</h3><!-- /.p-menu__body-title -->
         </div><!-- /.p-menu__body-title-outline -->
         <div class="p-menu__items p-menu-cards">
 
@@ -445,7 +460,8 @@ $news_query = new WP_Query(
           <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
 
-          <article class="p-menu-cards__item p-menu-card">
+          <article class="p-menu-cards__item js-scrollAnimation p-menu-card">
+         
               <div class="p-menu-card__header">
                 <figure class="p-menu-card__figure">
                 <?php
@@ -462,6 +478,7 @@ $news_query = new WP_Query(
                 <div class="p-menu-card__footer">
                   <p class="p-menu-card__copy"><?php echo SCF::get( 'menuprice' );?></p>
               </div><!-- /.p-menu-card__footer -->
+          
           </article>
           
     <?php endwhile; ?>
@@ -470,14 +487,14 @@ $news_query = new WP_Query(
         </div><!-- /.p-menu-cards -->
       </div><!-- /.p-menu__body-item --><div class="p-menu__body-item">
         <div class="p-menu__body-title-outline">
-          <h3 class="p-menu__body-title">ドリンク</h3><!-- /.p-menu__body-title -->
+          <h3 class="p-menu__body-title js-scrollAnimation">ドリンク</h3><!-- /.p-menu__body-title -->
         </div><!-- /.p-menu__body-title-outline -->
        
         <div class="p-menu__drink">
-          <div class="p-menu__drink-img">
+          <div class="p-menu__drink-img js-scrollAnimation">
             <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/drink1.jpg" alt="ドリンク画像">
           </div><!-- /.p-menu__drink-img -->
-        <div class="p-menu__drink-body">
+        <div class="p-menu__drink-body js-scrollAnimation">
           <h4 class="p-menu__drink-title">コーヒー</h4><!-- /.p-menu__drink-title -->
           <dl class="p-menu__drink-items">
             <div class="p-menu__drink-item">
@@ -506,7 +523,7 @@ $news_query = new WP_Query(
             </div><!-- /.p-menu__drink-item -->
           </dl><!-- /.p-menu__drink-items -->
         </div><!-- /.p-menu__drink-body -->
-        <div class="p-menu__drink-body">
+        <div class="p-menu__drink-body js-scrollAnimation">
           <h4 class="p-menu__drink-title">紅茶</h4><!-- /.p-menu__drink-title -->
           <dl class="p-menu__drink-items">
             <div class="p-menu__drink-item">
@@ -523,7 +540,7 @@ $news_query = new WP_Query(
             </div><!-- /.p-menu__drink-item -->
           </dl><!-- /.p-menu__drink-items -->
         </div><!-- /.p-menu__drink-body -->
-        <div class="p-menu__drink-body">
+        <div class="p-menu__drink-body js-scrollAnimation">
           <h4 class="p-menu__drink-title">ソフトドリンク</h4><!-- /.p-menu__drink-title -->
           <dl class="p-menu__drink-items">
             <div class="p-menu__drink-item">
@@ -551,7 +568,7 @@ $news_query = new WP_Query(
         </div><!-- /.p-menu__drink -->
     </div><!-- /.p-menu__body -->
 
-    <div class="p-menu__btn c-btn-base">
+    <div class="p-menu__btn c-btn-base js-scrollAnimation">
       <a href="<?php echo $menu ?>" class="c-btn-base__link">その他のメニュー</a><!-- /.c-btn-base__link -->
     </div>
 
@@ -564,29 +581,32 @@ $news_query = new WP_Query(
 
 <section class="l-gallery p-gallery">
   <div class="l-inner">
-  <div class="p-gallery__title p-section__title">
-      <h2>
+  <div class="p-gallery__title p-section-title ">
+      <h2 class="js-scrollAnimation">
         <span class="p-section-title__en">gallery</span>
         <span class="p-section-title__jp">ギャラリー</span>
       </h2><!-- /.p-section-title__en -->
+      <div class="p-gallery__balloon js-scrollAnimation">
+        <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/gallery-text.png" alt="吹き出し">
+      </div><!-- /.p-access__balloon -->
     </div><!-- /.p-lunch__title -->
     <div class="p-gallery__body">
       <ul class="p-gallery__items">
-        <li class="p-gallery__item">
+        <li class="p-gallery__item js-scrollAnimation">
           <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/gallery1.jpg" alt="ギャラリー画像1">
         </li><!-- /.p-gallery__item -->
-        <li class="p-gallery__item">
+        <li class="p-gallery__item js-scrollAnimation">
           <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/gallery2.jpg" alt="ギャラリー画像2">
         </li><!-- /.p-gallery__item -->
-        <li class="p-gallery__item">
+        <li class="p-gallery__item js-scrollAnimation">
           <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/gallery3.jpg" alt="ギャラリー画像2">
         </li><!-- /.p-gallery__item -->
-        <li class="p-gallery__item">
+        <li class="p-gallery__item js-scrollAnimation">
           <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/gallery4.jpg" alt="ギャラリー画像2">
         </li><!-- /.p-gallery__item -->
       </ul><!-- /.p-gallery__items -->
     </div><!-- /.p-gallery__body -->
-   <div class="p-gallery__btn c-btn-base">
+   <div class="p-gallery__btn c-btn-base js-scrollAnimation">
       <a href="" class="c-btn-base__link">インスタグラムを見る</a><!-- /.c-btn-base__link -->
     </div>
   </div><!-- /.l-inner -->
@@ -598,8 +618,8 @@ $news_query = new WP_Query(
 
 <section class="l-news p-news">
   <div class="l-inner">
-  <div class="p-news__title p-section__title">
-      <h2>
+  <div class="p-news__title p-section-title">
+      <h2 class="js-scrollAnimation">
         <span class="p-section-title__en">news</span>
         <span class="p-section-title__jp">お知らせ</span>
       </h2><!-- /.p-section-title__en -->
@@ -620,7 +640,7 @@ $news_query = new WP_Query(
 		<?php if ($my_query->have_posts()): // 投稿がある場合 ?>
 	  <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-        <article class="p-news-cards__item p-news-card">
+        <article class="p-news-cards__item js-scrollAnimation p-news-card">
           <a href="<?php the_permalink(); //記事のリンクを表示 ?>">
         <div class="p-news-card__header">
           <figure class="p-news-card__figure">
@@ -656,7 +676,7 @@ $news_query = new WP_Query(
 
   </div><!-- /.p-news-cards -->
 </div><!-- /.p-news__body -->
-<div class="p-news__btn c-btn-base">
+<div class="p-news__btn c-btn-base js-scrollAnimation">
       <a href="<?php echo $news ?>" class="c-btn-base__link">過去のお知らせ</a><!-- /.c-btn-base__link -->
     </div>
 </div><!-- /.l-inner -->

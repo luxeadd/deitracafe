@@ -21,6 +21,7 @@
   z-index: -1;
 }
 
+
 .p-menu::after {
   content: "";
   display: block;
@@ -44,8 +45,27 @@
 
 }
 
+.p-menu__leaf {
+  width: rem(250);
+  height: rem(280);
+  position: absolute;
+  top: rem(-93);
+  left: rem(-54);
+  
+  @include mq(tab) {
+    width: rem(506);
+    height: rem(400);
+    top: rem(-142);
+    left: rem(-94);
+
+  }
+}
+
 
 .p-menu__title {
+  width: 100%;
+  max-width: rem(500);
+  margin: 0 auto;
   text-align: center;
 }
 

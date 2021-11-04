@@ -77,7 +77,8 @@
 }
 
 .p-news-card__category {
-  padding: rem(2) rem(14);
+  padding: 0 rem(14);
+  height: rem(22);
   background-color: $btn-color;
   color: #fff;
   font-size: rem(12);
@@ -85,17 +86,38 @@
   top: 5%;
   left: rem(-7);
 
+  @include mq(tab) {
+    height: rem(24);
+  }
+
 }
 .p-news-card__category::before {
-  position: absolute;
-  top: 0;
-  display: block;
-  height: 11px;
+  // position: absolute;
+  // top: 0;
+  // display: block;
+  // height: 11px;
+  // content: '';
+  // border: 11.5px solid $btn-color;
+  // right: rem(-5);
+  // border-right-width: rem(5);
+  // border-right-color: transparent;
+
   content: '';
-  border: 11.5px solid $btn-color;
-  right: rem(-5);
-  border-right-width: rem(5);
-  border-right-color: transparent;
+  position: absolute;
+  width: rem(10);
+  top: 0;
+  right: rem(-10);
+  z-index: 1;
+  border: rem(11) solid $text-color;
+  border-right-color: transparent;/*山形に切り抜き*/
+  
+  @include mq(tab) {
+  top: 0;
+    right: rem(-10);
+    border: rem(12) solid $text-color;
+    border-right-color: transparent;/*山形に切り抜き*/
+    
+  }
 }
 
 

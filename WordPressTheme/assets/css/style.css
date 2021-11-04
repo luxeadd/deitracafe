@@ -778,10 +778,7 @@ summary {
 	width: 6.25rem;
 }
 
-.p-access__title::before {
-	background: url(../img/top/access-text.png) no-repeat center center/contain;
-	content: "";
-	display: block;
+.p-access__balloon {
 	height: 10.75rem;
 	left: -10.6875rem;
 	position: absolute;
@@ -1153,17 +1150,17 @@ input[type="textarea"]:focus {
 
 .p-gallery__title {
 	margin: 0 auto;
+	margin: 0 auto;
+	max-width: 18.75rem;
 	position: relative;
 	text-align: center;
-	width: 7.5rem;
+	text-align: center;
+	width: 100%;
 }
 
-.p-gallery__title::before {
-	background: url(../img/top/gallery-text.png) no-repeat center center/contain;
-	content: "";
-	display: block;
+.p-gallery__balloon {
 	height: 6.5rem;
-	left: -9.5rem;
+	left: -3.3125rem;
 	position: absolute;
 	top: -6.8125rem;
 	width: 12.5rem;
@@ -1395,10 +1392,7 @@ input[type="textarea"]:focus {
 	width: 100%;
 }
 
-.p-lunch__title::before {
-	background: url(../img/top/lunch-text.png) no-repeat center center/contain;
-	content: "";
-	display: block;
+.p-lunch__balloon {
 	height: 6.8125rem;
 	position: absolute;
 	right: -1.6875rem;
@@ -1493,6 +1487,7 @@ input[type="textarea"]:focus {
 	background: #F7F6F4;
 	margin: 1.25rem auto 0;
 	max-width: 33.75rem;
+	overflow: hidden;
 	padding: 1.8125rem 0 1.25rem;
 	width: 100%;
 }
@@ -1609,10 +1604,6 @@ input[type="textarea"]:focus {
 	flex-direction: column;
 	position: relative;
 	width: 100%;
-}
-
-.p-menu-card a:hover {
-	opacity: 0.7;
 }
 
 .p-menu-card__figure {
@@ -1775,8 +1766,19 @@ input[type="textarea"]:focus {
 	z-index: 10;
 }
 
+.p-menu__leaf {
+	height: 17.5rem;
+	left: -3.375rem;
+	position: absolute;
+	top: -5.8125rem;
+	width: 15.625rem;
+}
+
 .p-menu__title {
+	margin: 0 auto;
+	max-width: 31.25rem;
 	text-align: center;
+	width: 100%;
 }
 
 .p-menu__body {
@@ -2020,22 +2022,22 @@ input[type="textarea"]:focus {
 	background-color: #222222;
 	color: #fff;
 	font-size: 0.75rem;
+	height: 1.375rem;
 	left: -0.4375rem;
-	padding: 0.125rem 0.875rem;
+	padding: 0 0.875rem;
 	position: absolute;
 	top: 5%;
 }
 
 .p-news-card__category::before {
-	border: 11.5px solid #222222;
+	border: 0.6875rem solid #222222;
 	border-right-color: transparent;
-	border-right-width: 0.3125rem;
 	content: '';
-	display: block;
-	height: 11px;
 	position: absolute;
-	right: -0.3125rem;
+	right: -0.625rem;
 	top: 0;
+	width: 0.625rem;
+	z-index: 1; /*山形に切り抜き*/
 }
 
 .p-news-card__time {
@@ -2236,11 +2238,14 @@ input[type="textarea"]:focus {
 	position: absolute;
 	top: -0.4375rem;
 	width: 12.75rem;
-	z-index: 10;
+	z-index: 20;
 }
 
 .p-news__title {
+	margin: 0 auto;
+	max-width: 18.75rem;
 	text-align: center;
+	width: 100%;
 }
 
 .p-news__body {
@@ -3007,10 +3012,7 @@ input[type="textarea"]:focus {
 }
 
 .p-top-mv__icon a {
-	display: inline-block;
 	height: 100%;
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
 	transition: all .3s;
 	width: 100%;
 }
@@ -3021,6 +3023,7 @@ input[type="textarea"]:focus {
 
 .p-top-mv__img {
 	height: 100vh;
+	position: relative;
 	width: 100%;
 }
 
@@ -3042,13 +3045,11 @@ input[type="textarea"]:focus {
 }
 
 .p-top-mv__body {
-	bottom: 2rem;
-	left: 1.25rem;
-	margin-left: auto;
-	max-width: 33.75rem;
+	bottom: 3.125rem;
+	left: 50%;
 	position: absolute;
-	right: 1.25rem;
-	width: 100%;
+	transform: translateX(-50%);
+	width: 90%;
 }
 
 .p-top-mv__item {
@@ -3056,15 +3057,450 @@ input[type="textarea"]:focus {
 	width: 100%;
 }
 
-.p-top-mv__item::before {
-	background: url(../img/top/mv-text.png) no-repeat center center/contain;
-	content: "";
-	display: block;
+.p-top-mv__balloon {
 	height: 5.125rem;
 	position: absolute;
 	right: -0.5625rem;
 	top: -2.5625rem;
 	width: 9.0625rem;
+}
+
+.p-top-mv {
+	-webkit-animation-name: fadeIn; /*1で解説*/
+	-webkit-animation-duration: 5s; /*アニメーションの長さ*/
+	-webkit-animation-delay: 1s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-timing-function: ease; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal;
+	animation-delay: 1s;
+	animation-direction: normal;
+	animation-duration: 5s;
+	animation-name: fadeIn;
+	animation-timing-function: ease; /*アニメーションの向き*/
+}
+
+.p-top-mv__logo {
+	-webkit-animation-name: fadeIn2; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 2.4s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 2.4s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: fadeIn2;
+	animation-timing-function: linear;
+	opacity: 0; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-top-mv__nav-item:first-child {
+	-webkit-animation-name: fadeIn2; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 1.5s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 1.5s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: fadeIn2;
+	animation-timing-function: linear;
+	opacity: 0; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-top-mv__nav-item:nth-child(2) {
+	-webkit-animation-name: fadeIn2; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 1.8s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 1.8s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: fadeIn2;
+	animation-timing-function: linear;
+	opacity: 0; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-top-mv__nav-item:nth-child(3) {
+	-webkit-animation-name: fadeIn2; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 2.1s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 2.1s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: fadeIn2;
+	animation-timing-function: linear;
+	opacity: 0; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-top-mv__nav-item:nth-child(4) {
+	-webkit-animation-name: fadeIn2; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 2.4s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 2.4s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: fadeIn2;
+	animation-timing-function: linear;
+	opacity: 0; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-top-mv__nav-item:nth-child(5) {
+	-webkit-animation-name: fadeIn2; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 2.7s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 2.7s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: fadeIn2;
+	animation-timing-function: linear;
+	opacity: 0; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-top-mv__nav-item:nth-child(6) {
+	-webkit-animation-name: fadeIn2; /*1で解説*/
+	-webkit-animation: duration 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 3s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation: duration 1s;
+	animation-delay: 3s;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-name: fadeIn2;
+	animation-timing-function: linear;
+	opacity: 0; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-top-mv__nav-item:nth-child(7) {
+	-webkit-animation-name: fadeIn2; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 3.3s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 3.3s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: fadeIn2;
+	animation-timing-function: linear;
+	opacity: 0; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-top-mv__icons {
+	-webkit-animation-name: fadeIn2; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 3.6s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 3.6s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: fadeIn2;
+	animation-timing-function: linear;
+	opacity: 0; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-top-mv__balloon {
+	-webkit-animation-name: balloon; /*1で解説*/
+	-webkit-animation-duration: 2s; /*アニメーションの長さ*/
+	-webkit-animation-iteration-count: infinite; /*動きのループ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 3s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 3s;
+	animation-direction: normal;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: balloon;
+	animation-timing-function: linear; /*開始と終了の状態*/
+}
+
+.p-access__balloon,
+.p-gallery__balloon,
+.p-lunch__balloon {
+	transform: scale(0);
+}
+
+.p-access__balloon.is-animated,
+.p-gallery__balloon.is-animated,
+.p-lunch__balloon.is-animated {
+	-webkit-animation-name: balloon2; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 0; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 0;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: balloon2;
+	animation-timing-function: linear; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.c-btn-base {
+	transform: scale(0);
+}
+
+.c-btn-base.is-animated {
+	-webkit-animation-name: btn; /*1で解説*/
+	-webkit-animation-duration: 1s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: linear; /*アニメーションの進行具合*/
+	-webkit-animation-direction: normal; /*アニメーションの向き*/
+	-webkit-animation-delay: 0; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-fill-mode: forwards;
+	animation-delay: 0;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: btn;
+	animation-timing-function: linear; /*開始と終了の状態*/
+}
+
+/*1で解説*/
+
+.p-section-title h2 {
+	opacity: 0;
+	overflow: hidden;
+}
+
+.p-section-title h2.is-animated {
+	opacity: 1;
+	position: relative;
+}
+
+.p-section-title h2.is-animated::before {
+	-webkit-animation: img-wrap 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	animation: img-wrap 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	background: #F3EFEB;
+	bottom: 0;
+	content: '';
+	left: 0;
+	opacity: 1;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10;
+}
+
+.p-lunch__title h2.is-animated::before,
+.p-gallery__title h2.is-animated::before,
+.p-access__title h2.is-animated::before {
+	background: #EAE0D5;
+}
+
+.p-lunch__footer-items,
+.p-concept__sub-title,
+.p-concept__text,
+.p-concept__img,
+.p-lunch__sub-title-box,
+.p-lunch-cards__item,
+.p-menu__body-title,
+.p-menu-cards__item,
+.p-menu__drink-img,
+.p-menu__drink-body,
+.p-gallery__item,
+.p-news-cards__item {
+	opacity: 0;
+}
+
+.p-concept__sub-title.is-animated,
+.p-lunch__sub-title-box.is-animated,
+.p-menu__body-title.is-animated,
+.p-menu__drink-img.is-animated,
+.p-gallery__item:first-child.is-animated,
+.p-news-cards__item:first-child.is-animated {
+	-webkit-animation-name: fadeInUp; /*1で解説*/
+	-webkit-animation-fill-mode: forwards; /*開始と終了の状態*/
+	-webkit-animation-duration: 3s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: ease; /*アニメーションの進行具合*/
+	-webkit-animation-delay: 0.2s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-direction: normal;
+	animation-delay: 0.2s;
+	animation-direction: normal;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-name: fadeInUp;
+	animation-timing-function: ease; /*アニメーションの向き*/
+}
+
+.p-lunch__footer-items.is-animated,
+.p-concept__text.is-animated,
+.p-lunch-cards__item:first-child.is-animated,
+.p-menu-cards__item:first-child.is-animated,
+.p-menu__drink-body.is-animated,
+.p-gallery__item:nth-child(2).is-animated,
+.p-news-cards__item:nth-child(2).is-animated {
+	-webkit-animation-name: fadeInUp; /*1で解説*/
+	-webkit-animation-fill-mode: forwards; /*開始と終了の状態*/
+	-webkit-animation-duration: 3s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: ease; /*アニメーションの進行具合*/
+	-webkit-animation-delay: 0.4s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-direction: normal;
+	animation-delay: 0.4s;
+	animation-direction: normal;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-name: fadeInUp;
+	animation-timing-function: ease; /*アニメーションの向き*/
+}
+
+.p-concept__img.is-animated,
+.p-lunch-cards__item:nth-child(2).is-animated,
+.p-menu-cards__item:nth-child(2).is-animated,
+.p-gallery__item:nth-child(3).is-animated,
+.p-news-cards__item:nth-child(3).is-animated {
+	-webkit-animation-name: fadeInUp; /*1で解説*/
+	-webkit-animation-fill-mode: forwards; /*開始と終了の状態*/
+	-webkit-animation-duration: 3s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: ease; /*アニメーションの進行具合*/
+	-webkit-animation-delay: 0.6s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-direction: normal;
+	animation-delay: 0.6s;
+	animation-direction: normal;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-name: fadeInUp;
+	animation-timing-function: ease; /*アニメーションの向き*/
+}
+
+.p-lunch-cards__item:nth-child(3).is-animated,
+.p-menu-cards__item:nth-child(3).is-animated,
+.p-gallery__item:nth-child(4).is-animated,
+.p-news-cards__item:nth-child(4).is-animated {
+	-webkit-animation-name: fadeInUp; /*1で解説*/
+	-webkit-animation-fill-mode: forwards; /*開始と終了の状態*/
+	-webkit-animation-duration: 3s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: ease; /*アニメーションの進行具合*/
+	-webkit-animation-delay: 0.8s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-direction: normal;
+	animation-delay: 0.8s;
+	animation-direction: normal;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-name: fadeInUp;
+	animation-timing-function: ease; /*アニメーションの向き*/
+}
+
+.p-lunch-cards__item:nth-child(4).is-animated,
+.p-menu-cards__item:nth-child(4).is-animated,
+.p-news-cards__item:nth-child(5).is-animated {
+	-webkit-animation-name: fadeInUp; /*1で解説*/
+	-webkit-animation-fill-mode: forwards; /*開始と終了の状態*/
+	-webkit-animation-duration: 3s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: ease; /*アニメーションの進行具合*/
+	-webkit-animation-delay: 1s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-direction: normal;
+	animation-delay: 1s;
+	animation-direction: normal;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-name: fadeInUp;
+	animation-timing-function: ease; /*アニメーションの向き*/
+}
+
+.p-menu-cards__item:nth-child(5).is-animated {
+	-webkit-animation-name: fadeInUp; /*1で解説*/
+	-webkit-animation-fill-mode: forwards; /*開始と終了の状態*/
+	-webkit-animation-duration: 3s; /*アニメーションの長さ*/
+	-webkit-animation-timing-function: ease; /*アニメーションの進行具合*/
+	-webkit-animation-delay: 1s; /*アニメーションの開始を遅らせる*/
+	-webkit-animation-direction: normal;
+	animation-delay: 1s;
+	animation-direction: normal;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-name: fadeInUp;
+	animation-timing-function: ease; /*アニメーションの向き*/
+}
+
+/*1で解説*/
+
+.loader-wrap {
+	align-items: center;
+	background: #fff;
+	display: flex;
+	height: 100vh;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.loader-img {
+	height: ren(100);
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 12.5rem;
+}
+
+.loader-img::before {
+	-webkit-animation: img-wrap 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	animation: img-wrap 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	background: #fff;
+	bottom: 0;
+	content: '';
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10000;
+}
+
+.loader-img img {
+	height: 100%;
+	width: 100%;
 }
 
 .p-navigation {
@@ -3301,7 +3737,7 @@ html {
 	width: 18.75rem;
 }
 
-.p-access__title::before {
+.p-access__balloon {
 	height: 12.5rem;
 	left: -9.6875rem;
 	top: -7.4375rem;
@@ -3388,10 +3824,10 @@ html {
 }
 
 .p-gallery__title {
-	width: 12.5rem;
+	max-width: 18.75rem;
 }
 
-.p-gallery__title::before {
+.p-gallery__balloon {
 	height: 9.0625rem;
 	left: -15.625rem;
 	top: -6.375rem;
@@ -3473,7 +3909,7 @@ html {
 	max-width: 31.25rem;
 }
 
-.p-lunch__title::before {
+.p-lunch__balloon {
 	height: 11.5rem;
 	right: -22.9375rem;
 	top: 4.9375rem;
@@ -3632,6 +4068,13 @@ html {
 	width: 23.375rem;
 }
 
+.p-menu__leaf {
+	height: 25rem;
+	left: -5.875rem;
+	top: -8.875rem;
+	width: 31.625rem;
+}
+
 .p-menu__body {
 	margin-left: auto;
 	margin-right: auto;
@@ -3695,6 +4138,17 @@ html {
 
 .p-news-card__title {
 	font-size: 0.875rem;
+}
+
+.p-news-card__category {
+	height: 1.5rem;
+}
+
+.p-news-card__category::before {
+	border: 0.75rem solid #222222;
+	border-right-color: transparent;
+	right: -0.625rem;
+	top: 0; /*山形に切り抜き*/
 }
 
 .p-news-cards {
@@ -4168,6 +4622,7 @@ html {
 
 .p-top-mv__img {
 	height: 93vh;
+	overflow: hidden;
 }
 
 .p-top-mv__title {
@@ -4180,13 +4635,21 @@ html {
 
 .p-top-mv__body {
 	bottom: 83px;
-	max-width: 24.25rem;
+	left: initial;
+	right: 1.25rem;
+	transform: translate(0);
+	width: 30.3125%;
 }
 
-.p-top-mv__item::before {
+.p-top-mv__balloon {
 	height: 6.5625rem;
 	top: -4.75rem;
 	width: 11.25rem;
+}
+
+.loader-img {
+	height: 12.5rem;
+	width: 25rem;
 }
 
 .sp-only {
@@ -4239,6 +4702,294 @@ html {
 
 .p-test {
 	color: brown;
+}
+
+}
+
+@-webkit-keyframes fadeIn {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@-webkit-keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeIn2 {
+
+0% {
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@-webkit-keyframes balloon {
+
+0% {
+	transform: scale(1);
+}
+
+10% {
+	transform: scale(1.1);
+}
+
+20% {
+	transform: scale(1);
+}
+
+30% {
+	transform: scale(1.1);
+}
+
+40% {
+	transform: scale(1);
+}
+
+100% {
+	transform: scale(1);
+}
+
+}
+
+@keyframes balloon {
+
+0% {
+	transform: scale(1);
+}
+
+10% {
+	transform: scale(1.1);
+}
+
+20% {
+	transform: scale(1);
+}
+
+30% {
+	transform: scale(1.1);
+}
+
+40% {
+	transform: scale(1);
+}
+
+100% {
+	transform: scale(1);
+}
+
+}
+
+@-webkit-keyframes balloon2 {
+
+0% {
+	transform: scale(0);
+}
+
+100% {
+	transform: scale(1);
+}
+
+}
+
+@keyframes balloon2 {
+
+0% {
+	transform: scale(0);
+}
+
+100% {
+	transform: scale(1);
+}
+
+}
+
+@-webkit-keyframes btn {
+
+0% {
+}
+
+100% {
+	transform: scale(1);
+}
+
+}
+
+@keyframes btn {
+
+0% {
+}
+
+100% {
+	transform: scale(1);
+}
+
+}
+
+@-webkit-keyframes img-wrap {
+
+100% {
+	transform: translateX(100%);
+}
+
+}
+
+@keyframes img-wrap {
+
+100% {
+	transform: translateX(100%);
+}
+
+}
+
+@-webkit-keyframes fadeInUp {
+
+0% {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+100% {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+
+@keyframes fadeInUp {
+
+0% {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+100% {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+
+@keyframes img-wrap {
+
+100% {
+	transform: translateX(100%);
 }
 
 }

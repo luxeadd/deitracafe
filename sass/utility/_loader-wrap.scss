@@ -1,0 +1,52 @@
+.loader-wrap {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+
+.loader-img {
+ width: rem(200);
+ height: ren(100);
+ margin: 0 auto;
+ overflow: hidden;
+ position: relative;
+
+ @include mq(tab) {
+   width: rem(400);
+   height: rem(200);
+
+ }
+}
+
+.loader-img::before {
+  animation: img-wrap 1s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: #fff;
+  bottom: 0;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+@keyframes img-wrap {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.loader-img img {
+  width: 100%;
+  height: 100%;
+}

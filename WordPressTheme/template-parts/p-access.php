@@ -1,10 +1,13 @@
 <div class="p-access">
   <div class="l-inner-sub">
     <div class="p-access__title p-section-title">
-      <h2>
+      <h2 class="js-scrollAnimation">
         <span class="p-section-title__en">access</span>
         <span class="p-section-title__jp">アクセス</span>
       </h2><!-- /.p-section-title__en -->
+      <div class="p-access__balloon js-scrollAnimation">
+        <img src="<?php echo get_template_directory_uri( ) ?>/assets/img/top/access-text.png" alt="吹き出し">
+      </div><!-- /.p-access__balloon -->
       
     </div><!-- /.p-access__titile -->
     <div class="p-access__map p-map">

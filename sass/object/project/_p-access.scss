@@ -50,12 +50,9 @@
  }
 }
 
-.p-access__title::before {
-  content: "";
-  display: block;
+.p-access__balloon {
   width: rem(200);
   height: rem(172);
-  background: url(../img/top/access-text.png) no-repeat center center/contain;
   position: absolute;
   top: rem(-114);
   left:  rem(-171);
