@@ -3012,6 +3012,7 @@ input[type="textarea"]:focus {
 }
 
 .p-top-mv__icon a {
+	display: flex;
 	height: 100%;
 	transition: all .3s;
 	width: 100%;

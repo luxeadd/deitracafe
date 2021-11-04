@@ -24,7 +24,7 @@
 
 </section>
 
-<div class="p-sub-contact__to-top c-btn-base">
+<div class="p-sub-contact__to-top c-btn-base js-scrollAnimation">
 	<a href="<?php echo esc_url( home_url( '/ ' ) ); ?>" class="c-btn-base__link">トップへ</a><!-- /.c-btn-base__link -->
 </div>
 
