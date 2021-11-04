@@ -156,7 +156,7 @@ function add_thanks_page() {
 echo <<< EOD
 <script>
 document.addEventListener( 'wpcf7mailsent', function( event ) {
-location = 'http://deitracafa.local//thanks/'; /* 遷移先のURL */
+location = 'http://sassy-make.com/pf10.sassy-make.com/thanks/'; 
 }, false );
 </script>
 EOD;
