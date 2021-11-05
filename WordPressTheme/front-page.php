@@ -75,17 +75,19 @@
         <div class="p-top-mv__icons">
           <div class="p-top-mv__icon">
             <a href="">
-              <img src="<?php echo get_template_directory_uri(  ) ?>/assets/img/top/icon_twitter-dark.png" alt="twitterアイコン">
+              <img src="<?php echo get_template_directory_uri(  ) ?>/assets/img/top/twitter.png" alt="twitterアイコン">
             </a>
           </div><!-- /.p-top-mv__icon -->
           <div class="p-top-mv__icon">
             <a href="">
-              <img src="<?php echo get_template_directory_uri(  ) ?>/assets/img/top/icon_instagram-dark.png" alt="instagramアイコン">
-            </a>
-          </div><!-- /.p-top-mv__icon -->
-          <div class="p-top-mv__icon">
-            <a href="">
-              <img src="<?php echo get_template_directory_uri(  ) ?>/assets/img/top/icon_youtube-dark.png" alt="youtubeアイコン">
+              <img src="<?php echo get_template_directory_uri(  ) ?>/assets/img/top/instagram.png" alt="instagramアイコン">
+              
+              </a>
+            </div><!-- /.p-top-mv__icon -->
+            <div class="p-top-mv__icon">
+              <a href="">
+              <img src="<?php echo get_template_directory_uri(  ) ?>/assets/img/top/youtube.png" alt="youtubeアイコン">
+           
             </a>
           </div><!-- /.p-top-mv__icon -->
        </div><!-- /.p-top-mv__icons -->

@@ -113,8 +113,11 @@
     <a class="previouspostslink" rel="prev" href="<?php the_permalink( $previous_id ); ?>">＜ 前の記事</a>
     <?php endif; ?>
     
-    <a href="/news" class="p-navigation-home">記事一覧</a>
+    <?php $news = esc_url( home_url( "/news/" )); ?>
+    <a href="<?php echo $news ?>" class="p-navigation-home">記事一覧</a>
     
+
+
     <!-- 次にに記事がなければ非表示 -->
     <?php if( $next_post ): ?>  
       <a class="nextpostslink" rel="next" href="<?php the_permalink( $next_id ); ?>">次の記事 ＞</a>
